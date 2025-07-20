@@ -1,0 +1,39 @@
+# -----------------------
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+
+# Virtual environment
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Output directories and files
+output/
+*.log
+*.png
+*.xlsx
+*.db
+
+# Data files
+data/*.csv
+
+# Environment files
+.env
+.env.*
+
+# GitHub Actions artifacts
+*.zip
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
