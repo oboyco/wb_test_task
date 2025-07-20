@@ -11,7 +11,7 @@ def transform_data(df: pd.DataFrame) -> pd.DataFrame:
     df = df.dropna(subset=['timestamp'])
 
     # Derive week_start_date
-    #df['week_start_date'] = df['timestamp'].dt.to_period('W-MON').apply(lambda r: r.start_time)
+    df['week_start_date'] = df['timestamp'].dt.to_period('W-MON').apply(lambda r: r.start_time)
 
     # Compute total_volume
     df['total_volume'] = df['quantity'] * df['price']
