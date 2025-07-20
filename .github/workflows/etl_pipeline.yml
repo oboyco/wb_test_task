@@ -25,7 +25,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run ETL script
-      run: python etl.py
+      run: python main.py
 
     - name: Upload charts.xlsx
       uses: actions/upload-artifact@v4
