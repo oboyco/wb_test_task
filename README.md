@@ -1,3 +1,5 @@
+NOTE: LOGS and TESTS were missed by design as there were no time and no requirements. We can talk about it during the meeting
+
 ## 1. Как запустить ETL вручную
 
 1. Перейдите во вкладку **Actions** данного репозитория
