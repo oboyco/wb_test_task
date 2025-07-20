@@ -1,7 +1,7 @@
 import pandas as pd
 
 def extract_data(file_path: str) -> pd.DataFrame:
-    df = pd.read_csv(r'D:\whitebit_etl_project\data\white_bit_trades.csv')
+    df = pd.read_csv('data/white_bit_trades.csv')
 
     # Drop rows with any blank or missing values
     df = df.dropna()
