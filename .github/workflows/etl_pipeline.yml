@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -28,19 +28,19 @@ jobs:
       run: python etl.py
 
     - name: Upload charts.xlsx
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: charts
         path: output/charts.xlsx
 
     - name: Upload top_clients.xlsx
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: top_clients
         path: output/top_clients.xlsx
 
     - name: Upload SQLite DB
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: agg_result_db
         path: output/agg_result.db
