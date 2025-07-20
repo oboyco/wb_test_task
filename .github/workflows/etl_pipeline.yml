@@ -38,6 +38,12 @@ jobs:
       with:
         name: top_clients
         path: output/top_clients.xlsx
+        
+    - name: Upload aggregated data
+      uses: actions/upload-artifact@v4
+      with:
+        name: agg_data
+        path: output/agg_data.xlsx
 
     - name: Upload SQLite DB
       uses: actions/upload-artifact@v4
