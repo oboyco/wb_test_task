@@ -11,7 +11,7 @@ def transform_data(df: pd.DataFrame) -> pd.DataFrame:
     df = df.dropna(subset=['timestamp'])
 
     # Derive week_start_date
-    df['week_start_date'] = df['timestamp'].dt.to_period('W').apply(lambda r: r.start_time)
+    #df['week_start_date'] = df['timestamp'].dt.to_period('W-MON').apply(lambda r: r.start_time)
 
     # Compute total_volume
     df['total_volume'] = df['quantity'] * df['price']
@@ -45,8 +45,10 @@ def generate_charts(agg_df: pd.DataFrame):
     line_df = agg_df.groupby(['week_start_date'])['trade_count'].sum().reset_index()
     plt.figure(figsize=(10,6))
     sns.lineplot(data=line_df, x='week_start_date', y='trade_count', marker="o")
-    plt.title('Weekly Trade Dynamics')
-    plt.xticks(rotation=90)
+    plt.title('Trade Actions Dynamics, Weekly')
+    plt.xticks(ticks=range(len(line_df['week_start_date'])),
+           labels=line_df['week_start_date'],              
+           rotation=90)
     plt.tight_layout()
     plt.savefig("output/line_chart.png")
     plt.close()
